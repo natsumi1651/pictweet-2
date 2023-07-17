@@ -14,6 +14,7 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       # 新規登録ページへ移動する
       visit new_user_registration_path
       # ユーザー情報を入力する
+      fill_in 'Nickname', with: @user.nickname
       # サインアップボタンを押すとユーザーモデルのカウントが1上がることを確認する
       # トップページへ遷移したことを確認する
       # カーソルを合わせるとログアウトボタンが表示されることを確認する
